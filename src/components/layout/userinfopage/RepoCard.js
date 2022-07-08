@@ -10,7 +10,7 @@ import {
   TagLeftIcon,
   TagLabel,
 } from "@chakra-ui/react";
-import React, { useContext } from "react";
+import React from "react";
 import {
   FaLink,
   FaBook,
@@ -19,7 +19,6 @@ import {
   FaInfo,
   FaUtensils,
 } from "react-icons/fa";
-import GithubContext from "../../../context/GithubContext";
 
 const RepoCard = ({
   url,

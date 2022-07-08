@@ -32,7 +32,7 @@ const UserSearch = () => {
     };
     getUserList();
   }, [text, currentPage, usersPerPage, dispatch]);
-  console.log(users);
+  
   const handleChange = (e) => setText(e.target.value);
 
   const handleSubmit = (e) => {
