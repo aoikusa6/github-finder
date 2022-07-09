@@ -1,8 +1,8 @@
-const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
+const GITHUB_URL = "https://api.github.com/"
+const GITHUB_TOKEN = "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"
 
 export const getUser = async (username) => {
-  const response = await fetch(`${GITHUB_URL}/users/${username}`, {
+  const response = await fetch(`${GITHUB_URL}users/${username}`, {
     headers: {
       Authorization: `token ${GITHUB_TOKEN}`,
     },
@@ -23,7 +23,7 @@ export const getRepos = async (username) => {
   const perPage = new URLSearchParams({
     per_page: 10,
   });
-  const response = await fetch(`${GITHUB_URL}/users/${username}/repos?${sortedBy}&${perPage}`, {
+  const response = await fetch(`${GITHUB_URL}users/${username}/repos?${sortedBy}&${perPage}`, {
     headers: {
       Authorization: `token ${GITHUB_TOKEN}`,
     },
@@ -39,7 +39,7 @@ export const getRepos = async (username) => {
 
 export const searchUsers = async (currentUser, currentPage, usersPerPage) => {
   const user = new URLSearchParams({
-    q: currentUser ? currentUser : "Loc",
+    q: currentUser ? currentUser : "Ha",
   });
   const page = new URLSearchParams({
     page: currentPage ? currentPage : 1,
@@ -48,7 +48,7 @@ export const searchUsers = async (currentUser, currentPage, usersPerPage) => {
     per_page: usersPerPage ? usersPerPage : 24,
   });
   const response = await fetch(
-    `${GITHUB_URL}/search/users?${user}&${page}&${perPage}`,
+    `${GITHUB_URL}search/users?${user}&${page}&${perPage}`,
     {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,

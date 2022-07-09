@@ -9,7 +9,7 @@ import DetailedInfo from "../components/layout/userinfopage/DetailedInfo";
 import RepoList from "../components/layout/userinfopage/RepoList";
 
 const User = () => {
-  const { dispatch, isLoading, repos } = useContext(GithubContext);
+  const { dispatch, isLoading, repos, user } = useContext(GithubContext);
   const params = useParams();
 
   useEffect(() => {

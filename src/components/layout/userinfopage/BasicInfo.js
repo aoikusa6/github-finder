@@ -9,6 +9,7 @@ import {
   Link,
   Tag,
   useColorModeValue,
+  Slide,
 } from "@chakra-ui/react";
 import { FaAngleLeft } from "react-icons/fa";
 import React, { useContext } from "react";
