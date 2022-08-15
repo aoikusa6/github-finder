@@ -45,7 +45,7 @@ export const searchUsers = async (currentUser, currentPage, usersPerPage) => {
     per_page: usersPerPage ? usersPerPage : 24,
   });
   const response = await fetch(
-    `${process.env.REACT_APP_GITHUB_URL}/search/users?${user}&${page}&${perPage}`,
+    `${process.env.REACT_APP_GITHUB_URL}search/users?${user}&${page}&${perPage}`,
     {
       headers: {
         Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
